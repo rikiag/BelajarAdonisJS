@@ -19,4 +19,8 @@ const Route = use('Route')
 
 Route.get('/', 'PostController.index')
 
+Route.get('/post/add', 'PostController.add')
+
 Route.get('/post/:id', 'PostController.details')
+
+Route.post('/post', 'PostController.store')

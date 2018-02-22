@@ -1,0 +1,42 @@
+@layout('main')
+
+@section('content')
+<br>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Basic Form Elements
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-12">
+				<form role="form" action="/post" method="POST">
+					{{ csrfField() }}
+					<div class="form-group">
+						<label>Title</label>
+						<input class="form-control" name="title" placeholder="title">
+						<p class="help-block">Example block-level help text here.</p>
+					</div>
+					<div class="form-group">
+						<label>Post Content</label>
+						<textarea class="form-control" rows="7" name="body"></textarea>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-primary pull-right">Add</button>
+					</div>
+				</form>
+			</div>
+			<!-- /.col-lg-6 (nested) -->
+		</div>
+		<!-- /.row (nested) -->
+	</div>
+	<!-- /.panel-body -->
+</div>
+@endsection
+
+@section('css')
+{{-- CSS here --}}
+@endsection
+
+@section('script')
+{{-- Script Here --}}
+@endsection
