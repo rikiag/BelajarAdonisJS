@@ -51,6 +51,16 @@
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        @if(old('notification'))
+                            <div class="alert alert-success">
+                                {{ old('notification') }}
+                            </div>
+                        @endif
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-12">
                         @!section('content')
